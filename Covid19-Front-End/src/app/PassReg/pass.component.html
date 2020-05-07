@@ -1,0 +1,58 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <fieldset>
+                    <legend class="text-center">Valid information is required to register. <span class="req"><small>
+                                required *</small></span></legend>
+
+                    <div class="form-group">
+                        <label for="Name"><span class="req">* </span> Name: </label>
+                        <input required type="text" [(ngModel)]="pass.name" name='name' id="name" class="form-control phone" maxlength="28" placeholder="Enter your Full Name" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Mobile No."><span class="req">* </span> Mobile No. </label>
+                        <input class="form-control" type="text" [(ngModel)]="pass.phno" name="phno" id="phno" required placeholder="Enter valid Mobile Number" />
+                        <div id="errFirst"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Address"><span class="req">* </span> Address : </label>
+                        <input class="form-control" type="text" [(ngModel)]="pass.address" name="address" id="address" placeholder="Address" required />
+                        <div id="errLast"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Reason"><span class="req">* </span> Reason: </label>
+                        <input class="form-control" required type="text" [(ngModel)]="pass.reason" name="reason" id="email" placeholder="Reason for pass requirment" />
+                        <div class="status" id="status"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Vehicle No"><span class="req">* </span> Vehicle No: </label>
+                        <input class="form-control" required type="text" [(ngModel)]="pass.vhno" name="vhno" id="vhno" placeholder="Vehicle Number" />
+                        <div class="status" id="status"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Destination"><span class="req">* </span> Destination: </label>
+                        <input class="form-control" required type="text" [(ngModel)]="pass.destination" name="destination"
+                            id="destination" placeholder="Enter the destination" />
+                        <div class="status" id="status"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" name="submit_reg" value="RegisterPass" (click)="submitPassForm()">
+                    </div>
+                </fieldset>
+            </form><!-- ends register form -->
+            <!-- second for to fiter user-->
+            <div style="text-align: center">
+                <h1 class="display-3">{{message}}</h1>
+            </div>
+        </div><!-- ends col-6 -->
+
+    </div>
+</div>
