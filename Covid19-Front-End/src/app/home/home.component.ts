@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PassRegistrationService } from '../pass-registration.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  cases: any;
+
+  constructor(private service: PassRegistrationService) { }
 
   ngOnInit(): void {
-  }
+
+    let response = this.service.getCaseReport();
+    response.subscribe((data) => this.cases = [data]);
+    }
 
 }

@@ -6,22 +6,18 @@
         <tr>
             <th>Id</th>
             <th>Name</th>
-            <th>Mobile Number</th>
+            <th>Age</th>
             <th>Address</th>
-            <th>Reason</th>
-            <th>Vehicle Nummber</th>
-            <th>Destination</th>
+            <th>Date and Time of Appointment</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let pass of passes">
-            <td>{{pass.id}}</td>
-            <td>{{pass.name}}</td>
-            <td>{{pass.phno}}</td>
-            <td>{{pass.address}}</td>
-            <td>{{pass.reason}}</td>
-            <td>{{pass.vhno}}</td>
-            <td>{{pass.destination}}</td>
+        <tr *ngFor="let appointment of appointments" >
+            <td>{{appointment.id}}</td>
+            <td>{{appointment.name}}</td>
+            <td>{{appointment.age}}</td>
+            <td>{{appointment.Address}}</td>
+            <td>{{appointment.appointmentdatetime}}</td>
             <!-- <td class="text-center"><button class="btn btn-danger btn-xs" (click)="delteUser(user.id)"><span class="glyphicon glyphicon-remove"></span> Delete</button></td> -->
           </tr>
     </tbody>

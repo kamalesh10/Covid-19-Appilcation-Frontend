@@ -1,1 +1,46 @@
-<p>doc-appointment works!</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <fieldset>
+                    <legend class="text-center pt-4 pb-4">Valid information is required to register. <span class="req"><small>
+                                required *</small></span></legend>
+
+                    <div class="form-group">
+                        <label for="Name"><span class="req">* </span> Name: </label>
+                        <input required type="text" [(ngModel)]="fixappointment.name" name ='name' id="name" class="form-control name" maxlength="28" placeholder="Enter your Full Name" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Mobile No."><span class="req">* </span> Age </label>
+                        <input class="form-control" type="text" [(ngModel)]="fixappointment.age" name ="age" id="phno" required placeholder="Enter your Age" />
+                        <div id="errFirst"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Address"><span class="req">* </span> Address: </label>
+                        <input class="form-control" type="text" [(ngModel)]="fixappointment.address" name="address" id="address" placeholder="Address" required />
+                        <div id="errLast"></div>
+                    </div>
+
+                    <div class="input-wrapper from-group">
+                        <label for="dateandtime"><span class="req">* </span> Date and Time: </label>
+                        <input class="form-control" [(ngModel)]="fixappointment.appointmentdatetime" name="appointmentdatetime"
+                            [owlDateTimeTrigger]="dtPicker1" [owlDateTime]="dtPicker1">
+                        <owl-date-time #dtPicker1></owl-date-time>
+                    </div>
+
+                    <div class="form-group pt-4">
+                        <input class="btn btn-success" type="submit" name="submit_reg" value="RegisterPass" (click)="fixAppointment()">
+                    </div>
+                </fieldset>
+            </form><!-- ends register form -->
+            <!-- second for to fiter user-->
+            <div style="text-align: center">
+                <h1 class="display-3">{{message}}</h1>
+            </div>
+        </div><!-- ends col-6 -->
+
+    </div>
+</div>

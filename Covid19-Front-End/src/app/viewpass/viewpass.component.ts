@@ -15,7 +15,7 @@ export class ViewpassComponent implements OnInit {
   ngOnInit() {
 
     let response = this.service.getPasses();
-    response.subscribe((data)=>this.passes=data);
+    response.subscribe((data)=> this.passes = data);
   }
 
   /**

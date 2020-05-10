@@ -11,7 +11,6 @@ export class PassComponent implements OnInit {
 
   pass: PassEntity = new PassEntity('', 0, '', '', 0, '');
   message: any;
-  passes: any;
 
   constructor(private service: PassRegistrationService) { }
 
@@ -25,8 +24,7 @@ export class PassComponent implements OnInit {
 
     let response = this.service.passRegistration(this.pass);
     response.subscribe((data)=>this.message = data);
-    
-  }
+     }
 
 
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DocEntity } from '../PassEntity';
+import { PassRegistrationService } from '../pass-registration.service';
 
 @Component({
   selector: 'app-doc-appointment',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DocAppointmentComponent implements OnInit {
 
-  constructor() { }
+  fixappointment: DocEntity = new DocEntity('', 0, '', 0);
+  message: any;
+
+  constructor(private service: PassRegistrationService) { }
 
   ngOnInit(): void {
   }
 
+  public fixAppointment() {
+
+    let response = this.service.fixdocappointment(this.fixappointment);
+    response.subscribe((data)=>this.message = data);
+    
+  }
 }
