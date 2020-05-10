@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PassRegistrationService } from '../pass-registration.service';
+import { CovidserviceService } from '../covidservice.service';
 
 @Component({
   selector: 'app-healthcare',
@@ -10,7 +10,7 @@ export class HealthcareComponent implements OnInit {
 
   details: any;
 
-  constructor(private service: PassRegistrationService) { }
+  constructor(private service: CovidserviceService) { }
 
   ngOnInit(){
 

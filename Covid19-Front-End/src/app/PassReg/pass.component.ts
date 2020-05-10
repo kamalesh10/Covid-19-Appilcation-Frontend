@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PassEntity } from '../PassEntity';
-import { PassRegistrationService } from '../pass-registration.service';
+import { CovidserviceService } from '../covidservice.service';
 
 @Component({
   selector: 'app-pass',
@@ -12,7 +12,7 @@ export class PassComponent implements OnInit {
   pass: PassEntity = new PassEntity('', 0, '', '', 0, '');
   message: any;
 
-  constructor(private service: PassRegistrationService) { }
+  constructor(private service: CovidserviceService) { }
 
   ngOnInit(): void {
   }

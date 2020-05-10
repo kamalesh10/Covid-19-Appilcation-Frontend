@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class PassRegistrationService {
+export class CovidserviceService {
 
   private BASE_URL = "http://covid19-tracker.cloudjiffy.net";
   private PASS_REGISTRATION = this.BASE_URL +'/pass/addpass';
